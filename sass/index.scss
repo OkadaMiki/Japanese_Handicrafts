@@ -1,0 +1,126 @@
+html{
+    font-size: 62.5%;
+}
+html,
+body{
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    height: 40px;
+    div.headarea{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        a{
+            display: inline-block;
+            display: flex;
+            width: 350px;
+            text-decoration: none;
+            div.logoimg{
+                width: 40px;
+                height: 100%;
+            }
+            h1{
+                font-size: 2rem;
+                line-height: 4rem;
+            }
+        }
+        div.menuarea{
+            width: 40px;
+            height: 100%;
+            div.hamburgermenu{
+                display: none;
+                position: relative;
+                width: 40px;
+                height: 100%;
+                background: #EADEC9;
+                span{
+                    position: absolute;
+                    width: 50%;
+                    height: 1px;
+                    left: 10px;
+                    background: #333;
+                    transition: .5s;
+                }
+                span:first-child{
+                    top: 12px;
+                }
+                span:nth-child(2){
+                    top: 20px;
+                }
+                span:last-child{
+                    top: 28px;
+                }
+            }
+            /* active */
+            div.hamburgermenu.active>span:first-child{
+                transform: rotate(45deg);
+                top: 20px;
+                left: 10px;
+            }
+            div.hamburgermenu.active>span:nth-child(2){
+                opacity: 0;
+            }
+            div.hamburgermenu.active>span:last-child{
+                transform: rotate(-45deg);
+                top: 20px;
+                left: 10px;
+            }
+            
+            /* パソコンサイズのメニューのスタイル */
+            nav.desktop-menu {
+                display: block;
+                display: flex;
+            }
+            
+            /* スマホサイズ時のメディアクエリ */
+            @media only screen and (max-width: 768px) {
+                .hamburger-menu {
+                    display: block;
+                }
+                .desktop-menu {
+                    display: none;
+                }
+            }
+        }
+    }
+    // slide
+    ul.slide{
+        width: 80%;
+        height: 95vh;
+        background: #EDE1D0;
+        transform: translateX(125%);
+        transition: .5s ease-in-out;
+        list-style-type: none;
+    }
+    ul.slide>li{
+        line-height: 4;
+        text-align: center;
+    }
+    ul.slide>li>a:link,
+    ul.slide>li>a:hover,
+    ul.slide>li>a:visited{
+        color: #fff;
+    }
+    ul.slide.active{
+        transform: translateX(25%);
+    }
+}
+
+main{
+    width: 100%;
+    height: 1200px;
+}
+
+footer{
+    width: 100%;
+    height: 5vh;
+    p{
+        width: 100%;
+        text-align: center;
+        line-height: 5vh;
+    }
+}
+
