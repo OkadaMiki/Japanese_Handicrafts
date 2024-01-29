@@ -10,7 +10,7 @@ body {
 
 header {
   width: 100%;
-  height: 40px;
+  height: 56px;
 }
 header div.headarea {
   height: 100%;
@@ -19,29 +19,27 @@ header div.headarea {
 }
 header div.headarea a {
   display: inline-block;
-  display: flex;
-  width: 350px;
-  text-decoration: none;
-}
-header div.headarea a div.logoimg {
-  width: 40px;
+  width: calc(100% - 60px);
   height: 100%;
 }
-header div.headarea a h1 {
-  font-size: 2rem;
-  line-height: 4rem;
+header div.headarea a div.logoimg {
+  width: 144px;
+  height: 100%;
+}
+header div.headarea a div.logoimg img {
+  width: 100%;
+  height: 100%;
 }
 header div.headarea div.menuarea {
-  width: 40px;
+  width: 64px;
   height: 100%;
   /* active */
   /* パソコンサイズのメニューのスタイル */
-  /* スマホサイズ時のメディアクエリ */
 }
 header div.headarea div.menuarea div.hamburgermenu {
   display: none;
   position: relative;
-  width: 40px;
+  width: 64px;
   height: 100%;
   background: #EADEC9;
 }
@@ -79,14 +77,6 @@ header div.headarea div.menuarea nav.desktop-menu {
   display: block;
   display: flex;
 }
-@media only screen and (max-width: 768px) {
-  header div.headarea div.menuarea .hamburger-menu {
-    display: block;
-  }
-  header div.headarea div.menuarea .desktop-menu {
-    display: none;
-  }
-}
 header ul.slide {
   width: 80%;
   height: 95vh;
@@ -110,7 +100,7 @@ header ul.slide.active {
 
 main {
   width: 100%;
-  height: 1200px;
+  height: 100%;
 }
 
 footer {
@@ -121,4 +111,14 @@ footer p {
   width: 100%;
   text-align: center;
   line-height: 5vh;
+}
+
+/* スマホサイズ時のメディアクエリ */
+@media only screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+  .desktop-menu {
+    display: none;
+  }
 }/*# sourceMappingURL=index.css.map */
