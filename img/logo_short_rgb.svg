@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 214.45 95.33">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #333233;
+        font-family: RoleSlabTextPro-MdIt, 'Role Slab Text Pro';
+        font-size: 36px;
+        font-style: italic;
+        font-weight: 500;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #0a0f23;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        fill: #c83824;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="_レイヤー_1-2" data-name="レイヤー 1">
+    <g>
+      <polygon class="cls-3" points="75.96 18.05 75.96 28.17 82.61 29.18 87.11 24.37 86.55 16.69 82.24 14.62 75.96 18.05"/>
+      <polygon class="cls-3" points="94 55.1 87.72 55.1 83.33 59.93 85.23 67.67 90.11 67.88 94 65.11 94 59.78 94 55.1"/>
+      <path class="cls-2" d="M1,92.77s27.94-11.98,56.32-12.18c12.92-.09,19.22.38,29.51,1.41,0,0,6.04.85,13.35,1.89,10.05,1.43,22.49,3.23,24.88,3.66,20.06,3.63,41.37,9.64,59.07,5.22s29.32-12.18,29.32-12.18"/>
+      <path class="cls-2" d="M161.67,83.71s-40.29,3.85-61.49.18"/>
+      <text class="cls-1" transform="translate(10.2 30.31)"><tspan x="0" y="0" xml:space="preserve">   Japanese</tspan><tspan x="0" y="40">Handicrafts</tspan></text>
+    </g>
+  </g>
+</svg>

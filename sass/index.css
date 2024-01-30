@@ -8,6 +8,13 @@ body {
   height: 100%;
 }
 
+:root {
+  --base-color: #fff;
+  --accentColor: #bc002d;
+  --maincolor: #e3bc75;
+  --fontcolor: #3f312b;
+}
+
 div.container {
   display: grid;
   grid-template-rows: 56px 1fr 5vh;
@@ -22,73 +29,72 @@ header div.headarea {
   display: flex;
   justify-content: space-between;
 }
-header div.headarea a {
+header div.headarea a.logo {
   display: inline-block;
-  width: calc(100% - 60px);
+  width: 108px;
   height: 90%;
   margin-top: 2.2px;
   margin-bottom: 2.2px;
-  margin-left: 8px;
+  margin-left: 12px;
 }
-header div.headarea a div.logoimg {
-  width: 108px;
+header div.headarea a.logo div.logoimg {
+  width: 100%;
   height: 100%;
 }
-header div.headarea a div.logoimg img {
+header div.headarea a.logo div.logoimg img {
   width: 100%;
   height: 100%;
 }
 header div.headarea div.menuarea {
-  width: 64px;
+  width: 56px;
   height: 100%;
   /* active */
   /* パソコンサイズのメニューのスタイル */
 }
 header div.headarea div.menuarea div.hamburgermenu {
-  display: none;
+  display: block;
   position: relative;
-  width: 64px;
+  width: 56px;
   height: 100%;
-  background: #EADEC9;
+  background: var(--maincolor);
 }
 header div.headarea div.menuarea div.hamburgermenu span {
   position: absolute;
   width: 50%;
-  height: 1px;
-  left: 10px;
-  background: #333;
+  height: 2px;
+  left: 14px;
+  background: var(--fontcolor);
   transition: 0.5s;
 }
 header div.headarea div.menuarea div.hamburgermenu span:first-child {
-  top: 12px;
+  top: 18px;
 }
 header div.headarea div.menuarea div.hamburgermenu span:nth-child(2) {
-  top: 20px;
+  top: 28px;
 }
 header div.headarea div.menuarea div.hamburgermenu span:last-child {
-  top: 28px;
+  top: 38px;
 }
 header div.headarea div.menuarea div.hamburgermenu.active > span:first-child {
   transform: rotate(45deg);
-  top: 20px;
-  left: 10px;
+  top: 28px;
+  left: 14px;
 }
 header div.headarea div.menuarea div.hamburgermenu.active > span:nth-child(2) {
   opacity: 0;
 }
 header div.headarea div.menuarea div.hamburgermenu.active > span:last-child {
   transform: rotate(-45deg);
-  top: 20px;
-  left: 10px;
+  top: 28px;
+  left: 14px;
 }
 header div.headarea div.menuarea nav.desktop-menu {
-  display: block;
-  display: flex;
+  display: none;
 }
 header ul.slide {
   width: 80%;
   height: 95vh;
-  background: #EDE1D0;
+  background: var(--base-color);
   transform: translateX(125%);
   transition: 0.5s ease-in-out;
   list-style-type: none;
@@ -98,9 +104,11 @@ header ul.slide > li {
   text-align: center;
 }
 header ul.slide > li > a:link,
-header ul.slide > li > a:hover,
 header ul.slide > li > a:visited {
-  color: #fff;
+  color: #333;
+}
+header ul.slide > li > a:hover {
+  color: var(--fontcolor);
 }
 header ul.slide.active {
   transform: translateX(25%);
@@ -108,12 +116,16 @@ header ul.slide.active {
 
 main {
   width: 100%;
+  color: var(--fontcolor);
   grid-row: 2/3;
 }
 main div.firstview {
   width: 100%;
   height: 50vh;
   background: url(/img/workshop-4863393_1280.jpg) center center/cover;
+}
+main div.firstview h1 {
+  color: var(--base-color);
 }
 main div.description {
   width: 360px;
@@ -140,16 +152,51 @@ footer {
 }
 footer p {
   width: 100%;
+  color: var(--fontcolor);
   text-align: center;
   line-height: 5vh;
 }
 
-/* スマホサイズ時のメディアクエリ */
-@media only screen and (max-width: 768px) {
-  .hamburger-menu {
+/* PCサイズ時のメディアクエリ */
+@media only screen and (min-width: 768px) {
+  header div.headarea {
+    padding: 0 56px;
+  }
+  header div.headarea div.menuarea {
+    width: 640px;
+    height: 100%;
+  }
+  header div.headarea div.menuarea div.hamburgermenu {
+    height: 100%;
+    display: none;
+  }
+  header div.headarea div.menuarea nav.desktopmenu {
+    height: 100%;
     display: block;
   }
-  .desktop-menu {
-    display: none;
+  header div.headarea div.menuarea nav.desktopmenu ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    list-style-type: none;
+  }
+  header div.headarea div.menuarea nav.desktopmenu ul li {
+    width: 160px;
+    height: 40px;
+    text-align: center;
+  }
+  header div.headarea div.menuarea nav.desktopmenu ul li a:link, header div.headarea div.menuarea nav.desktopmenu ul li a:visited {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    color: var(--fontcolor);
+    font-size: 1.6rem;
+    line-height: 4rem;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  header div.headarea div.menuarea nav.desktopmenu ul li a:hover {
+    color: var(--accentColor);
   }
 }/*# sourceMappingURL=index.css.map */

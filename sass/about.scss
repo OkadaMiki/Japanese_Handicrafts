@@ -1,0 +1,39 @@
+html{
+    font-size: 62.5%;
+}
+html,
+body{
+    height: 100%;
+}
+:root{
+    --base-color: #fff;
+    --accentColor: #bc002d;
+    --maincolor: #ddb262;
+    --fontcolor: #3f312b;
+}
+
+div.container{
+    display: grid;
+    grid-template-rows: 56px 1fr 5vh;
+}
+
+
+main{
+    width: 100%;
+    color: var(--fontcolor);
+    grid-row: 2/3;
+    
+}
+
+footer{
+    width: 100%;
+    grid-row: 3/4;
+    p{
+        width: 100%;
+        color: var(--fontcolor);
+        text-align: center;
+        line-height: 5vh;
+    }
+}
+
+/* pcサイズ時のメディアクエリ */
