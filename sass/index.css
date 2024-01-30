@@ -8,9 +8,14 @@ body {
   height: 100%;
 }
 
+div.container {
+  display: grid;
+  grid-template-rows: 56px 1fr 5vh;
+}
+
 header {
   width: 100%;
-  height: 56px;
+  grid-row: 1/2;
 }
 header div.headarea {
   height: 100%;
@@ -20,10 +25,13 @@ header div.headarea {
 header div.headarea a {
   display: inline-block;
   width: calc(100% - 60px);
-  height: 100%;
+  height: 90%;
+  margin-top: 2.2px;
+  margin-bottom: 2.2px;
+  margin-left: 8px;
 }
 header div.headarea a div.logoimg {
-  width: 144px;
+  width: 108px;
   height: 100%;
 }
 header div.headarea a div.logoimg img {
@@ -100,17 +108,35 @@ header ul.slide.active {
 
 main {
   width: 100%;
-  height: 100%;
+  grid-row: 2/3;
 }
 main div.firstview {
   width: 100%;
   height: 50vh;
   background: url(/img/workshop-4863393_1280.jpg) center center/cover;
 }
+main div.description {
+  width: 360px;
+  height: auto;
+  margin-top: 32px;
+}
+main div.description div.fourdesc {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+main div.description div.fourdesc h3 {
+  margin-bottom: 8px;
+}
+main div.description div.fourdesc section {
+  width: 320px;
+  height: auto;
+  margin-top: 8px;
+}
 
 footer {
   width: 100%;
-  height: 5vh;
+  grid-row: 3/4;
 }
 footer p {
   width: 100%;
