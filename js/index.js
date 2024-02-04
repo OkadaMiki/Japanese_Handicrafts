@@ -21,10 +21,7 @@ window.addEventListener("resize", toggleMenu);
 window.addEventListener("load", toggleMenu);
 
 // ハンバーガーメニュー
-const hambact = hamburgerMenu.classList;
-const slideact = slide.classList;
-
 hamburgerMenu.addEventListener("click", () => {
-    hambact.toggle("active");
-    slideact.toggle("active");
+    hamburgerMenu.classList.toggle("active");
+    slide.classList.toggle("active");
 });

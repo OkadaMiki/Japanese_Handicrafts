@@ -5,17 +5,22 @@ html {
 
 html,
 body {
+  min-width: 390px;
+  max-width: 1200px;
+  margin: 0 auto;
   height: 100%;
 }
 
 :root {
   --base-color: #fff;
   --accentColor: #bc002d;
-  --maincolor: #e3bc75;
+  --maincolor: #E3BC75;
   --fontcolor: #3f312b;
 }
 
 div.container {
+  width: 100%;
+  margin: 0 auto;
   display: grid;
   grid-template-rows: 56px 1fr 5vh;
 }
@@ -94,21 +99,31 @@ header div.headarea div.menuarea nav.desktop-menu {
 header ul.slide {
   width: 80%;
   height: 95vh;
+  padding-top: 16px;
   background: var(--base-color);
   transform: translateX(125%);
   transition: 0.5s ease-in-out;
   list-style-type: none;
 }
 header ul.slide > li {
-  line-height: 4;
-  text-align: center;
+  width: 100%;
+  height: 56px;
 }
 header ul.slide > li > a:link,
 header ul.slide > li > a:visited {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
   color: #333;
+  font-size: 1.6rem;
+  line-height: 5.6rem;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.2s;
 }
 header ul.slide > li > a:hover {
-  color: var(--fontcolor);
+  border: solid 4px var(--maincolor);
+  line-height: 4.8rem;
 }
 header ul.slide.active {
   transform: translateX(25%);
@@ -122,10 +137,16 @@ main {
 main div.firstview {
   width: 100%;
   height: 50vh;
-  background: url(/img/workshop-4863393_1280.jpg) center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(/img/overlay.png) repeat, url(/img/workshop-4863393_1280.jpg) center center/cover;
 }
 main div.firstview h1 {
+  width: 90%;
   color: var(--base-color);
+  font-size: 2.4rem;
+  text-align: center;
 }
 main div.description {
   width: 360px;
@@ -198,5 +219,8 @@ footer p {
   }
   header div.headarea div.menuarea nav.desktopmenu ul li a:hover {
     color: var(--accentColor);
+  }
+  header ul.slide {
+    display: none;
   }
 }/*# sourceMappingURL=index.css.map */
