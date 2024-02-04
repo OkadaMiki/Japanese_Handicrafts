@@ -142,7 +142,7 @@ main div.firstview {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(./images/overlay.png) repeat, url(./images/workshop-4863393_1280.jpg) center center/cover;
+  background: url(./images/overlay.png) repeat, url(./images/workshop_image.jpg) center center/cover;
 }
 main div.firstview h1 {
   width: 90%;
