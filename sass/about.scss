@@ -3,26 +3,144 @@ html{
 }
 html,
 body{
+    min-width: 390px;
+    max-width: 1200px;
+    margin: 0 auto;
     height: 100%;
+    color: var(--fontcolor);
+    font-family: sans-serif;
 }
 :root{
     --base-color: #fff;
     --accentColor: #bc002d;
-    --maincolor: #ddb262;
+    --maincolor: #E3BC75;
     --fontcolor: #3f312b;
 }
 
 div.container{
+    width: 100%;
+    margin: 0 auto;
     display: grid;
     grid-template-rows: 56px 1fr 5vh;
 }
+header{
+    width: 100%;
+    grid-row: 1/2;
+    div.headarea{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        a.logo{
+            display: inline-block;
+            width: 108px;
+            height: 90%;
+            margin-top: 2.2px;
+            margin-bottom: 2.2px;
+            margin-left: 12px;
+            div.logoimg{
+                width: 100%;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        div.menuarea{
+            width: 56px;
+            height: 100%;
+            div.hamburgermenu{
+                display: block;
+                position: relative;
+                width: 56px;
+                height: 100%;
+                background: var(--maincolor);
+                span{
+                    position: absolute;
+                    width: 50%;
+                    height: 2px;
+                    left: 14px;
+                    background: var(--fontcolor);
+                    transition: .5s;
+                }
+                span:first-child{
+                    top: 18px;
+                }
+                span:nth-child(2){
+                    top: 28px;
+                }
+                span:last-child{
+                    top: 38px;
+                }
+            }
+            /* active */
+            div.hamburgermenu.active>span:first-child{
+                transform: rotate(45deg);
+                top: 28px;
+                left: 14px;
+            }
+            div.hamburgermenu.active>span:nth-child(2){
+                opacity: 0;
+            }
+            div.hamburgermenu.active>span:last-child{
+                transform: rotate(-45deg);
+                top: 28px;
+                left: 14px;
+            }
+            
+            /* パソコンサイズのメニューのスタイル */
+            nav.desktop-menu {
+                display: none;
+            }
+            
+            
+        }
+    }
+    // slide
+    ul.slide{
+        width: 80%;
+        height: 95vh;
+        padding-top: 16px;
+        background: var(--base-color);
+        transform: translateX(125%);
+        transition: .5s ease-in-out;
+        list-style-type: none;
+    }
+    ul.slide>li{
+        width: 100%;
+        height: 56px;
+    }
+    ul.slide>li>a:link,
+    ul.slide>li>a:visited{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        color: #333;
+        font-size: 1.6rem;
+        line-height: 5.6rem;
+        text-align: center;
+        text-decoration: none;
+        transition: .2s;
+    }
+    ul.slide>li>a:hover{
+        border: solid 4px var(--maincolor);
+        line-height: 4.8rem;
 
+    }
+    ul.slide.active{
+        transform: translateX(25%);
+    }
+}
 
 main{
     width: 100%;
     color: var(--fontcolor);
     grid-row: 2/3;
-    
+    h2{
+        font-size: 2rem;
+        text-align: center;
+        margin: 48px 0;
+    }
 }
 
 footer{
@@ -36,4 +154,54 @@ footer{
     }
 }
 
-/* pcサイズ時のメディアクエリ */
+/* PCサイズ時のメディアクエリ */
+@media only screen and (min-width: 768px) {
+    header{
+        div.headarea{
+            padding: 0 56px;
+            div.menuarea{
+                width: 640px;
+                height: 100%;
+                div.hamburgermenu {
+                    height: 100%;
+                    display: none;
+                }
+                nav.desktopmenu {
+                    height: 100%;
+                    display: block;
+                    ul{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: end;
+                        list-style-type: none;
+                        li{
+                            width: 160px;
+                            height: 40px;
+                            text-align: center;
+                            a{
+                                &:link,
+                                &:visited{
+                                    width: 100%;
+                                    height: 100%;
+                                    display: inline-block;
+                                    color: var(--fontcolor);
+                                    font-size: 1.6rem;
+                                    line-height: 4rem;
+                                    text-decoration: none;
+                                    transition: .5s;
+                                }
+                                &:hover{
+                                    color: var(--accentColor);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        ul.slide{
+            display: none;
+        }
+    }
+}
