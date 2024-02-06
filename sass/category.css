@@ -1,0 +1,197 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  min-width: 390px;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  color: var(--fontcolor);
+  font-family: sans-serif;
+}
+
+:root {
+  --base-color: #fff;
+  --accentColor: #bc002d;
+  --maincolor: #E3BC75;
+  --fontcolor: #3f312b;
+}
+
+div.container {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 56px 1fr 5vh;
+}
+
+header {
+  width: 100%;
+  grid-row: 1/2;
+}
+header div.headarea {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header div.headarea a.logo {
+  display: inline-block;
+  width: 108px;
+  height: 90%;
+  margin-top: 2.2px;
+  margin-bottom: 2.2px;
+  margin-left: 12px;
+}
+header div.headarea a.logo div.logoimg {
+  width: 100%;
+  height: 100%;
+}
+header div.headarea a.logo div.logoimg img {
+  width: 100%;
+  height: 100%;
+}
+header div.headarea div.menuarea {
+  width: 56px;
+  height: 100%;
+  /* active */
+  /* パソコンサイズのメニューのスタイル */
+}
+header div.headarea div.menuarea div.hamburgermenu {
+  display: block;
+  position: relative;
+  width: 56px;
+  height: 100%;
+  background: var(--maincolor);
+}
+header div.headarea div.menuarea div.hamburgermenu span {
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  left: 14px;
+  background: var(--fontcolor);
+  transition: 0.5s;
+}
+header div.headarea div.menuarea div.hamburgermenu span:first-child {
+  top: 18px;
+}
+header div.headarea div.menuarea div.hamburgermenu span:nth-child(2) {
+  top: 28px;
+}
+header div.headarea div.menuarea div.hamburgermenu span:last-child {
+  top: 38px;
+}
+header div.headarea div.menuarea div.hamburgermenu.active > span:first-child {
+  transform: rotate(45deg);
+  top: 28px;
+  left: 14px;
+}
+header div.headarea div.menuarea div.hamburgermenu.active > span:nth-child(2) {
+  opacity: 0;
+}
+header div.headarea div.menuarea div.hamburgermenu.active > span:last-child {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 14px;
+}
+header div.headarea div.menuarea nav.desktop-menu {
+  display: none;
+}
+header ul.slide {
+  width: 80%;
+  height: 95vh;
+  padding-top: 16px;
+  background: var(--base-color);
+  transform: translateX(125%);
+  transition: 0.5s ease-in-out;
+  list-style-type: none;
+}
+header ul.slide > li {
+  width: 100%;
+  height: 56px;
+}
+header ul.slide > li > a:link,
+header ul.slide > li > a:visited {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #333;
+  font-size: 1.6rem;
+  line-height: 5.6rem;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.2s;
+}
+header ul.slide > li > a:hover {
+  border: solid 4px var(--maincolor);
+  line-height: 4.8rem;
+}
+header ul.slide.active {
+  transform: translateX(25%);
+}
+
+main {
+  width: 100%;
+  color: var(--fontcolor);
+  grid-row: 2/3;
+  padding: 0 16px 0;
+}
+
+footer {
+  width: 100%;
+  grid-row: 3/4;
+}
+footer p {
+  width: 100%;
+  color: var(--fontcolor);
+  text-align: center;
+  line-height: 5vh;
+}
+
+/* PCサイズ時のメディアクエリ */
+@media only screen and (min-width: 768px) {
+  header div.headarea {
+    padding: 0 56px;
+  }
+  header div.headarea div.menuarea {
+    width: 640px;
+    height: 100%;
+  }
+  header div.headarea div.menuarea div.hamburgermenu {
+    height: 100%;
+    display: none;
+  }
+  header div.headarea div.menuarea nav.desktopmenu {
+    height: 100%;
+    display: block;
+  }
+  header div.headarea div.menuarea nav.desktopmenu ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    list-style-type: none;
+  }
+  header div.headarea div.menuarea nav.desktopmenu ul li {
+    width: 160px;
+    height: 40px;
+    text-align: center;
+  }
+  header div.headarea div.menuarea nav.desktopmenu ul li a:link, header div.headarea div.menuarea nav.desktopmenu ul li a:visited {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    color: var(--fontcolor);
+    font-size: 1.6rem;
+    line-height: 4rem;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  header div.headarea div.menuarea nav.desktopmenu ul li a:hover {
+    color: var(--accentColor);
+  }
+  header ul.slide {
+    display: none;
+  }
+}/*# sourceMappingURL=category.css.map */
