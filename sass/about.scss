@@ -136,10 +136,47 @@ main{
     width: 100%;
     color: var(--fontcolor);
     grid-row: 2/3;
+    padding: 0 16px 0;
     h2{
-        font-size: 2rem;
+        font-size: 2.8rem;
         text-align: center;
         margin: 48px 0;
+    }
+    div.craft{
+        h3{
+            font-size: 2.4rem;
+            text-align: center;
+        }
+        section.craftsec{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: solid 1px var(--maincolor);
+            border-radius: 16px;
+            padding: 16px 16px 8px;
+            margin-top: 16px;
+            h4{
+                font-size: 2rem;
+                margin-bottom: 8px;
+            }
+            dl{
+                margin: 8px;
+                dt{
+                    font-size: 1.8rem;
+                }
+                dd{
+                    font-size: 1.6rem;
+                    dl{
+                        dt{
+                            font-size: 1.6rem;
+                        }
+                        dd{
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
