@@ -30,6 +30,9 @@ div.container {
 header {
   width: 100%;
   grid-row: 1/2;
+  position: sticky;
+  top: 0;
+  background: var(--base-color);
 }
 header div.headarea {
   height: 100%;
@@ -136,6 +139,28 @@ main {
   color: var(--fontcolor);
   grid-row: 2/3;
   padding: 0 16px 0;
+}
+main h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-top: 48px;
+}
+main div.orimono h3 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-top: 36px;
+  margin-bottom: 16px;
+}
+main div.orimono div.studio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+  border: solid 1px var(--maincolor);
+  border-radius: 16px;
+}
+main div.orimono div.studio h4 {
+  font-size: 2rem;
 }
 
 footer {
