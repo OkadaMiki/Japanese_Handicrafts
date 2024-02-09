@@ -152,22 +152,89 @@ main div.orimono h3 {
   margin-bottom: 16px;
 }
 main div.orimono div.studio {
+  width: 358px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 8px;
   border: solid 1px var(--maincolor);
   border-radius: 16px;
+  position: relative;
 }
 main div.orimono div.studio h4 {
+  width: 100%;
   font-size: 2rem;
+  text-align: center;
+  margin: 8px 0;
 }
-main div.orimono div.studio dl dt {
+main div.orimono div.studio h4:after {
+  content: "";
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(-135deg) translateY(9px);
+  position: absolute;
+  right: 20px;
+  top: 2rem;
+}
+main div.orimono div.studio div.akodeli {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+  padding-bottom: 16px;
+}
+main div.orimono div.studio div.akodeli div.tagarea {
+  width: 100%;
+  height: 3.2rem;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-evenly;
+}
+main div.orimono div.studio div.akodeli div.tagarea a:link,
+main div.orimono div.studio div.akodeli div.tagarea a:visited {
+  display: inline-block;
+  height: 100%;
+  padding: 0 16px;
   font-size: 1.8rem;
-  font-weight: 500;
+  line-height: 3.2rem;
+  text-decoration: none;
+  color: var(--fontcolorcolor);
+  background: var(--maincolor);
+  border-radius: 8px;
+  transition: 0.5s;
 }
-main div.orimono div.studio dl dd {
-  font-size: 1.4rem;
+main div.orimono div.studio div.akodeli div.tagarea a:hover {
+  background: var(--accentColor);
+  color: var(--base-color);
+}
+main div.orimono div.studio div.akodeli video {
+  width: 354px;
+  margin-top: 16px;
+}
+main div.orimono div.studio div.akodeli dl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main div.orimono div.studio div.akodeli dl dt {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 16px;
+}
+main div.orimono div.studio div.akodeli dl dd {
+  margin-top: 8px;
+  font-size: 1.6rem;
+  text-align: center;
+}
+main div.orimono div.studio div.akodeli iframe {
+  margin-top: 16px;
+}
+main div.orimono div.studio div.isopen {
+  display: block;
 }
 
 footer {

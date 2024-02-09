@@ -138,6 +138,110 @@ main{
     color: var(--fontcolor);
     grid-row: 2/3;
     padding: 0 16px 0;
+    h2{
+        font-size: 2.8rem;
+        text-align: center;
+        margin-top: 48px;
+    }
+    div.kanto{
+        h3{
+            text-align: center;
+            font-size: 2.4rem;
+            margin-top: 36px;
+            margin-bottom: 16px;
+        }
+        h4{
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20px;
+            margin-bottom: 16px;
+        }
+        div.studio{
+            width: 358px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 8px;
+            border: solid 1px var(--maincolor);
+            border-radius: 16px;
+            position: relative;
+            h5{
+                width: 100%;
+                font-size: 1.6rem;
+                text-align: center;
+                margin: 8px 0;
+                &:after {
+                    content: "";
+                    border-top: 1px solid black;
+                    border-left: 1px solid black;
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    transform: rotate(-135deg) translateY(9px);
+                    position: absolute;
+                    right: 20px;
+                    top: 2rem;
+                }
+            }
+            div.akodeli{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+                padding-bottom: 16px;
+                div.tagarea{
+                    width: 100%;
+                    height: 3.2rem;
+                    margin-top: 16px;
+                    display: flex;
+                    justify-content: space-evenly;
+                    a:link,
+                    a:visited{
+                        display: inline-block;
+                        height: 100%;
+                        padding: 0 16px;
+                        font-size: 1.8rem;
+                        line-height: 3.2rem;
+                        text-decoration: none;
+                        color: var(--fontcolorcolor);
+                        background:  var(--maincolor);
+                        border-radius: 8px;
+                        transition: .5s;
+                    }
+                    a:hover{
+                        background: var(--accentColor);
+                        color: var(--base-color);
+                    }
+                }
+                video{
+                    width: 354px;
+                    margin-top: 16px;
+                }
+                dl{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    dt{
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                        margin-top: 16px;
+                    }
+                    dd{
+                        margin-top: 8px;
+                        font-size: 1.6rem;
+                        text-align: center;
+                    }
+                }
+                iframe{
+                    margin-top: 16px;
+                }
+            }
+            div.isopen{
+                display: block;
+            }
+        }
+    }
 }
 
 footer{
